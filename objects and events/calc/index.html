@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<input id=a class="num">
+		<input id=b class="zn" value="?">
+		<input id=c class="num">
+		<input class=zn value="=">
+		<input id=r class="num">
+	</div>
+
+	<br><div>
+		<input type="button" class="kn" value="+"
+		onclick="r.value = parseInt(a.value) + parseInt(c.value); b.value = '+';">
+		<input type="button" class="kn" value="-"
+		onclick="r.value = a.value-c.value; b.value = '-';">
+		<input type="button" class="kn" value="*"
+		onclick="r.value = a.value * c.value; b.value = '*';">
+		<input type="button" class="kn" value="/"
+		onclick=" if (c.value == 0)
+				  	alert('Делить на ноль нельзя')
+				  else
+				  	r.value = a.value / c.value; b.value = '/';">
+	</div>
+</body>
+</html>

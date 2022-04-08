@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Library</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<script>var num = 1;</script>
+</head>
+<body>
+	<div class="slider">
+		<div class="nav">
+		<button class="prev" title="Предыдущий слайд" 
+		onclick="
+		if (num == 1) 
+			alert('это первая картинка');
+		else
+			num--;
+			Photo.src = 'img/'+num+'.jpg'; 
+			">
+		</button>
+		<button class="next" title="Следущий слайд"
+		onclick="
+		if (num == 11) 
+			alert('это последняя картинка');
+		else
+			num++; 
+			Photo.src = 'img/'+num+'.jpg';">
+		</button>	
+			</div>
+		</div>
+	<img src="img/1.jpg" id="Photo">
+	</div>
+</body>
+</html>

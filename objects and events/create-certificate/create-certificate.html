@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html">
+	<link rel="stylesheet" href="css/info-table.css">
+	<link rel="stylesheet" href="css/speech-input.css">
+	<script src="./js/jquery-3.3.1.min.js"></script> 
+	<script src="js/closing-сonfirmation.js"></script>
+	<title>Создать медсправку</title>
+</head>
+<body>
+	<a href="index.html">Назад на главную страницу</a>
+	<form>
+		<h2>Выберите тип справки</h2>
+		<select type="text" class="name-certificate">
+			<option value="blood">Бланк анализа крови</option>
+			<option value="pee">Бланк анализа мочи</option>
+		</select>
+		<h2>Выберите нужное кол-во строк</h2>
+		<input type="number" class="rows-certificate speech-input" lang="ru" data-patience="2">
+		<!-- <input type="text" name="fix press enter on input " value="Fix IE bug" style=" display:none "> -->
+		<p><input type="text" class="speech-input" lang="ru" data-patience="2" placeholder="Фамилия">
+		<p><input type="text" class="speech-input" lang="ru" data-patience="2" placeholder="Имя">
+		<p><input type="text" class="speech-input" lang="ru" data-patience="2" placeholder="Отчество">
+		<p><input type="button" class="button-create-table" value="Создать таблицу">
+	</form>
+</body>	
+	<script src="./js/create-certificate.js"></script>
+	<script  src="./js/data.js"></script>
+	<script src="./js/speech-input.js"></script>
+</html>

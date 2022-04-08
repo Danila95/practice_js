@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Library</title>
+	<script>
+		function foto(num) {
+			MyFoto.src="img/"+num+".jpg"
+		}
+	</script>
+</head>
+<body>
+	<div style="border-style: outset; width: 200px; height: 608px;">
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(1);">
+		Первая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(2);">
+		Вторая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(3);">
+		Третья фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(4);">
+		Четвертая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(5);">
+		Пятая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(6);">
+		Шестая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(7);">
+		Седьмая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(8);">
+		Восьмая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(9);">
+		Девятая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(10);">
+		Десятая фотография	
+		</div>
+		<div style="cursor:pointer;"
+		onmouseover="this.style.color='red';"
+		onmouseout="this.style.color='black';"
+		onclick="foto(11);">
+		Одиннадцатая фотография	
+		</div>
+	</div>
+	<div style="position: absolute; top: 15px; left: 250px;
+	border-style: outset; padding: 10px; width: 1050px;
+	height: 580px; text-align: center;">
+	<img src="img/11.jpg" id="MyFoto" height="580px">
+	</div>
+</body>
+</html>

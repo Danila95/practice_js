@@ -1,0 +1,38 @@
+.slider {
+	position: absolute; 
+	display: inline-block;
+	top: 15px; 
+	left: 250px;
+	border-style: outset;
+	padding: 10px;
+	width: 1050px;
+	height: 580px;
+	text-align: center;
+}
+
+button {
+	position: absolute;
+    background: url(img/slider-arrow.svg) 
+    center/contain no-repeat;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    border: none;
+    top: 50%;
+}
+
+button.prev {
+	left: 0;
+	transform: scaleX(-1);
+
+}
+
+button.next {
+	right: 0;
+}
+
+img {
+	height: 580px;
+	width: 950px;
+	margin: 25px 0 25px 310px ;
+}

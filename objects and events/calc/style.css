@@ -1,0 +1,18 @@
+div {
+	text-align: center;
+}
+
+.num {
+	width: 60px;
+}
+
+.kn {
+	width: 25px;
+}
+
+.zn {
+	width: 25px;
+	text-align: center;
+	border:none;
+}
+

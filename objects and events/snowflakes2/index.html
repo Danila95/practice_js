@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Snowflakes</title>
+	<!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
+</head>
+<body bgcolor="#000088" text=#00FFFF onLoad="move()">
+<center><Hl>C новым годом! </Hl>
+<img src="winter-night.jpg">
+</center>
+</body>
+</html>
+<script>
+var sy = new Array ();
+var sx = new Array ();
+var kol = 30;
+for (var i = 0; i<kol; i++) {
+	sy[i] = Math.random()*7+3; 
+	sx[i]=Math.random()*7-3;
+	} 
+for (var i = 0; i < kol; i++) {
+		x = Math.round(Math.random()*document.body.clientHeight);
+		y = Math.round(Math.random()*document.body.clientHeight);
+		n = Math.round(Math.random()*2+1);
+		document.write('<img id="img'+i+'" src="'+n+'.png" style="position:absolute; left:'+x+'; top:'+y+'; Width:30px;">');
+	}
+function move() {
+	for (i = 0; i < kol; i++) {
+		sn = document.getElementById('img'+i);
+		x = parseInt(sn.style.left)+sx[i];
+		if (x > document.body.clientHeight-50)
+			sn.style.left = "20 px"
+		else if (x < 20)
+			sn.style.left = document.body.clientWidth-50+" px";
+		else
+			sn.style.left = x+" px";
+			y = parseInt(sn.style.top)+sy[i];
+		if (y > document.body.clientWidth-50)
+			sn.style.top = "0 px";
+		else 
+			sn.style.top = y+" px";
+	}
+setTimeout('move()', 100)
+}
+</script>

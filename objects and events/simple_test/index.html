@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тест</title>
+	<script src = "script.js"></script>
+</head>
+<body>
+	<div>
+		<b>Вопрос 1.</b> В каком случае сообщение появиться по щелчку мыши?
+		<br> <input type="radio" id="a">
+		&lt;P onMouseDown="alert('Щелк');"&gt;
+		<br> <input type="radio" id="a">
+		&lt;P onClick="alert('Щелк');"&gt;
+		<br> <input type="radio" id="a">
+		&lt;P onMouseOver="alert('Щелк');"&gt;
+	</div>
+<br><div>
+	<b>Вопрос 2.</b> Нв странице записан код:
+	&lt;body onUnload="alert('А все...');"&gt;
+	<br>В какком случае появиться сообщение?
+	<br> <input type="checkbox" id="b">
+		 Когда посетитель закроет окно браузера.
+	<br> <input type="checkbox" id="b">
+		 Когда посетитель нажмет клавишу F5.
+	<br> <input type="checkbox" id="b">
+		 Когда посетитель щелкает по кнопке "Остановить".
+	</div>
+	<br><div>
+		<b>Вопрос 3.</b> В текстовые поля a и b введены числа 5 и 3.
+			Какой ответ появится при исполнении скрипта:
+		<br>"alert(a.value+b.value);"?
+		<br><select id="c">
+			<option value="1">Nan
+			<option value="2">8
+			<option value="3">53
+		</select>
+	</div>
+	<br><input type="button" value="Проверить" onclick="test();">
+</body>
+</html>
