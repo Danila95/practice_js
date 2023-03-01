@@ -1,0 +1,59 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Первый герой",
+      "description": "Первый герой в рейтинге!",
+      "element": "fire"
+    },
+    {
+      "id": 2,
+      "name": "Неизвестный герой",
+      "description": "Скрывающийся в тени",
+      "element": "wind"
+    },
+    {
+      "id": 3,
+      "name": "Морской герой",
+      "description": "Как аквамен, но не из DC",
+      "element": "water"
+    },
+    {
+      "id": "01241a81-d429-42dd-b3b6-805bcb39085a",
+      "name": "Danila Bogdanov",
+      "description": "dyujdtgyu",
+      "element": "fire"
+    },
+    {
+      "id": "0282de0b-d8b9-4726-b0e3-69d78de99043",
+      "name": "Roman",
+      "description": "fujhgkiyui",
+      "element": "wind"
+    },
+    {
+      "id": "2fe12652-78db-4dee-96ef-bb3436f40f93",
+      "name": "Yuri",
+      "description": "Hail to the great Yuri",
+      "element": "fire"
+    },
+    {
+      "id": "5d9b6fb7-11cc-40c4-89c8-52535a975b58",
+      "name": "Yuri",
+      "description": "Hail to the great Yuri",
+      "element": "water"
+    },
+    {
+      "id": "68944d86-5c90-437b-af03-65ce7a0400cc",
+      "name": "Yuri",
+      "description": "Hail to the great Yuri",
+      "element": "wind"
+    }
+  ],
+  "filters": [
+    "all",
+    "fire",
+    "water",
+    "wind",
+    "earth"
+  ]
+}

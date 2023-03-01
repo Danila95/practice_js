@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6435f80a-d1ac-466e-9c9a-70abc7ae2a4c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Полный курс по JavaScript + React - с нуля до результата/React/40 React Context и useContext/app/src/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Полный курс по JavaScript + React - с нуля до результата/React/40 React Context и useContext/app/src/Input.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2ITfDEe2XGo464x76l06l7lk3WG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6435f80a-d1ac-466e-9c9a-70abc7ae2a4c" name="Changes" comment="" />
+      <created>1670210375139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670210375139</updated>
+      <workItem from="1670210378656" duration="54000" />
+      <workItem from="1670210443085" duration="18000" />
+      <workItem from="1670210485135" duration="2000" />
+      <workItem from="1670224904734" duration="6000" />
+      <workItem from="1671530775029" duration="30000" />
+      <workItem from="1671530816219" duration="339000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/TypeScript - Быстрый Курс за 70 минут [2020] - Владилен Минин/5_classes.js" />
+        <option value="$PROJECT_DIR$/TypeScript - Быстрый Курс за 70 минут [2020] - Владилен Минин/4_function.js" />
+        <option value="$PROJECT_DIR$/TypeScript - Быстрый Курс за 70 минут [2020] - Владилен Минин/3_enum.js" />
+      </list>
+    </option>
+  </component>
+</project>
