@@ -29,24 +29,6 @@
       "name": "Roman",
       "description": "fujhgkiyui",
       "element": "wind"
-    },
-    {
-      "id": "2fe12652-78db-4dee-96ef-bb3436f40f93",
-      "name": "Yuri",
-      "description": "Hail to the great Yuri",
-      "element": "fire"
-    },
-    {
-      "id": "5d9b6fb7-11cc-40c4-89c8-52535a975b58",
-      "name": "Yuri",
-      "description": "Hail to the great Yuri",
-      "element": "water"
-    },
-    {
-      "id": "68944d86-5c90-437b-af03-65ce7a0400cc",
-      "name": "Yuri",
-      "description": "Hail to the great Yuri",
-      "element": "wind"
     }
   ],
   "filters": [

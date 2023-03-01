@@ -28,9 +28,9 @@ export const addHeroe = (data) => {
 }
 
 export const removeHeroe = (data, id) => {
+    const index = data.findIndex(item => item.id == id)
+    data.splice(index, 1)
 
-    data.findIndex(item => item.id === id)
-    console.log(data)
     return {
         type: 'REMOVE_HEROE',
         payload: data
