@@ -1,5 +1,3 @@
-
-
 export const heroesFetching = () => {
     return {
         type: 'HEROES_FETCHING'
@@ -27,12 +25,35 @@ export const addHeroe = (data) => {
     }
 }
 
-export const removeHeroe = (data, id) => {
-    const index = data.findIndex(item => item.id == id)
-    data.splice(index, 1)
-
+export const removeHeroe = (id) => {
     return {
         type: 'REMOVE_HEROE',
+        payload: id
+    }
+}
+
+export const filtersFetching = () => {
+    return {
+        type: 'FILTERS_FETCHEDING'
+    }
+}
+
+export const filtersFetched = (data) => {
+    return {
+        type: 'FILTERS_FETCHED',
         payload: data
+    }
+}
+
+export const activeFilterChanged = (filter) => {
+    return {
+        type: 'ACTIVE_FILTER_CHANGED',
+        payload: filter
+    }
+}
+
+export const filtersFetchingError = () => {
+    return {
+        type: 'FILTERS_FETCHING_ERROR'
     }
 }

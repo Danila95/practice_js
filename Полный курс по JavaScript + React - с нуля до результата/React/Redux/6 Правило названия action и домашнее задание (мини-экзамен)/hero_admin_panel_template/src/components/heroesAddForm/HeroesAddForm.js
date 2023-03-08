@@ -18,7 +18,7 @@ const HeroesAddForm = () => {
 
     useEffect(() => {
         request("http://localhost:3001/filters")
-            .then(data => setElements(data))
+            .then(data => setElements(data.filter(item => item.name !== 'all')))
 
         // eslint-disable-next-line
     }, []);
@@ -32,7 +32,13 @@ const HeroesAddForm = () => {
             element
         }
         request("http://localhost:3001/heroes", 'POST', JSON.stringify(newHero))
-        dispatch(addHeroe(newHero))
+            .then(res => console.log(res, 'Отправка успешна'))
+            .then(dispatch(addHeroe(newHero)))
+            .catch(err => console.log(err))
+
+        setName('')
+        setDescription('')
+        setElement('')
     }
 
     return (
@@ -60,6 +66,7 @@ const HeroesAddForm = () => {
                     id="text" 
                     placeholder="Что я умею?"
                     style={{"height": '130px'}}
+                    value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
@@ -71,13 +78,13 @@ const HeroesAddForm = () => {
                     className="form-select" 
                     id="element" 
                     name="element"
+                    value={element}
                     onChange={(e) => setElement(e.target.value)}
                 >
                     <option >Я владею элементом...</option>
-                    <option value={elements[1]}>Огонь</option>
-                    <option value={elements[2]}>Вода</option>
-                    <option value={elements[3]}>Ветер</option>
-                    <option value={elements[4]}>Земля</option>
+                    {elements.map(item =>
+                        <option key={item.name} value={item.name}>{item.label}</option>
+                    )}
                 </select>
             </div>
 
