@@ -15,11 +15,11 @@ const userObj: {
 
 
 const logBrtMsg = (isBirthday: boolean, userName: string, age: number): string => {
-	if (isBirthdayData) {
+	if (isBirthday) {
 		return `Congrats ${userName.toLocaleUpperCase()}, age: ${age + 1}`
 	} else {
 		return 'Error'
 	}
 }
 
-logBrtMsg(isBirthdayData, userNameData, 45)
+logBrtMsg(userObj.isBirthdayData, userObj.userNameData, 45)
