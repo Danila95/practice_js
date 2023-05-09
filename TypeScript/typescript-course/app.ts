@@ -189,9 +189,9 @@
 
 // let c = a + 10
 
-// function throwError(message: string) {
-// 	throw new Error(message)
-// }
+function throwError(message: string): void {
+	throw new Error(message)
+}
 
 // function loop(): never {
 // 	while (true) {}
@@ -200,3 +200,207 @@
 // function rec(): never {
 // 	return rec()
 // }
+
+// function log(a: number) {
+//     const b =2
+//     console.log(1)
+//     console.log(b)
+// }
+
+// const node = document.querySelector('.test')! as HTMLInputElement
+
+// node.value = '30'
+
+// const found = [{ a: 1 }, { b: 2 }].find(n => n.a === 3)
+// found!.a = 3
+
+//  class Box {
+//     big!: string
+//  }
+
+// class Human {
+//     date: Date
+
+//     constructor(date: Date) {
+//         this.date = date ?? new Date()
+//     }
+
+//     isProgrammer(): boolean {
+//         return false
+//     }
+// }
+
+// class User extends Human {
+// 	_name: string
+//     _hobbies: string[] = []
+
+// 	constructor(name: string, date: Date) {
+//         super(date)
+// 		this._name = name
+// 	}
+
+// getHobbies(): string[] {
+//     return this.hobbies
+// }
+
+// get hobbies(): string[] {
+//     return this._hobbies
+// }
+
+// addHobby(hobby: string): void {
+//     this.hobbies.push(hobby)
+// }
+
+// set name(name: string) {
+//     this._name = name
+// }
+
+// override isProgrammer(): boolean {
+//     console.log(super.isProgrammer())
+//     return true
+// }
+
+// setName(newName: string): this {
+//     this.name = newName
+//     return this
+// }
+// }
+
+// const user = new User('Danila', new Date())
+
+// console.log(user.isProgrammer())
+// user.addHobby('a')
+// user.addHobby('b')
+
+// user.setName('Elena').addHobby('s')
+
+// console.log(user.getHobbies())
+
+// console.log(user.hobbies)
+// user.name = 'Elena!'
+
+// console.log(user._name)
+
+// class Figure {
+//     static BASE_TYPE = 'FIGURE'
+//     public size: number = 10
+//     public color: string = 'red'
+//     private id: number
+
+//     constructor() {
+//         this.id = Math.random()
+//     }
+
+//     protected getId(): number {
+//         return this.id
+//     }
+// }
+
+// class Box extends Figure {
+//     static readonly TYPE = 'BOX'
+
+//     static logId() {
+//         console.log(this)
+//         console.log(Math.random())
+//     }
+
+//     #weight: number = 30
+
+//     public getInfo() {
+//         return {
+//             size: this.size,
+//             color: this.color,
+//             id: this.getId(),
+//             weight: this.#weight
+//         }
+//     }
+// }
+
+// const box = new Box()
+
+// Box.TYPE = 'RANDOM'
+
+// Box.logId()
+
+// console.log(Box.TYPE)
+// console.log(Box.BASE_TYPE)
+
+// console.log(box.getInfo())
+
+// class Car {
+//     constructor(public model: string, public color: string) {}
+// }
+
+// const ford = new Car('ford', 'red')
+
+// interface Lifecycle {
+// 	onInit(): void
+
+// 	onDestroy?(abort: boolean): void
+// }
+
+// interface ComponentOnChange {
+//     hasChanged: boolean
+
+// 	onChange(data: number): boolean
+// }
+
+// class Component implements Lifecycle, ComponentOnChange {
+//     hasChanged: boolean = false
+// 	onInit(): void {
+// 		console.log('Component on init')
+// 	}
+// 	onDestroy(abort: boolean): void {
+// 		if (abort) {
+// 			console.log('Component on destroy')
+// 		}
+// 	}
+// 	onChange(data: number): boolean {
+// 		if (data > 1) {
+// 			return true
+// 		} else {
+// 			return false
+// 		}
+// 	}
+// }
+
+// abstract class Logger {
+//     abstract log(message: string): void
+
+//     table(data: object) {
+//         console.table(data)
+//     }
+// }
+
+// class MessageLogger extends Logger {
+//     log(message: string): void {
+//         console.log(message)
+//     }
+// }
+
+// const logger = new MessageLogger()
+
+// logger.log('Hello')
+// logger.table({a: 1, b: 2})
+
+// class Person {
+// 	constructor(private hobbies: string[]) {}
+
+// 	getHobbies(): string[] {
+// 		return this.hobbies
+// 	}
+
+// 	addHobby(hobby: string): this {
+// 		this.hobbies.push(hobby)
+//         return this
+// 	}
+// }
+
+// console.log(new Person(['coding']).addHobby('piano').getHobbies())
+
+const test: boolean = 'true'
+
+console.log()
+
+
+
