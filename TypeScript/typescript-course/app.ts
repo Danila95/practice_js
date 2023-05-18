@@ -189,9 +189,9 @@
 
 // let c = a + 10
 
-function throwError(message: string): void {
-	throw new Error(message)
-}
+// function throwError(message: string): void {
+// 	throw new Error(message)
+// }
 
 // function loop(): never {
 // 	while (true) {}
@@ -398,9 +398,60 @@ function throwError(message: string): void {
 
 // console.log(new Person(['coding']).addHobby('piano').getHobbies())
 
-const test: boolean = 'true'
+// const test: boolean = 'true'
 
-console.log()
+// console.log()
 
+// const array: Array<string> = ['a', 'b', 'c']
+// const array2: Array<number> = [1, 2, 3]
 
+// const promise = new Promise<number>((resolve) => {
+//     setTimeout(() => {
+//         resolve(42)
+//     })
+// })
 
+// promise.then((value) => value.toFixed())
+
+// function double<T>(array: T[]): T[] {
+// 	return array.concat(array)
+// }
+
+// function fill<T>(array: any[], value: T): T[] {
+// 	return array.fill(value)
+// }
+
+// const res1 = double(['a', 'b', 'c'])
+// const res2 = double([1, 2, 3])
+
+// const res3 = fill(['a', 'b', 'c'], 1)
+// const res4 = fill(['a', 'b', 'c'], false)
+
+// // res1.map(item => item.concat('s'))
+// // res2.map(item => item.toFixed())
+
+// function merge<T, R>(a: T, b: R): T & R {
+// 	return Object.assign({}, a, b)
+// }
+
+// const res5 = merge({ a: 1 }, { b: 2, c: { d: 3 } })
+// console.log(res5);
+
+// function log<T extends string | number>(data: T): T {
+// 	console.log(data)
+// 	return data
+// }
+
+// let res1 = <string>log('i am string')
+// let res2 = log(42) as number
+// // let res3 = log(true) // error
+
+const obj = { a: 1, b: 2, c: 'a', key: 42 }
+const obj2 = { test: 100 }
+
+function getValue<T extends object, R extends keyof T>(obj: T, key: R) {
+	return obj[key]
+}
+
+const res1 = getValue(obj, 'key')
+const res2 = getValue(obj2, 'test')
