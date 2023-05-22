@@ -446,12 +446,41 @@
 // let res2 = log(42) as number
 // // let res3 = log(true) // error
 
-const obj = { a: 1, b: 2, c: 'a', key: 42 }
-const obj2 = { test: 100 }
+// const obj = { a: 1, b: 2, c: 'a', key: 42 }
+// const obj2 = { test: 100 }
 
-function getValue<T extends object, R extends keyof T>(obj: T, key: R) {
-	return obj[key]
-}
+// function getValue<T extends object, R extends keyof T>(obj: T, key: R) {
+// 	return obj[key]
+// }
 
-const res1 = getValue(obj, 'key')
-const res2 = getValue(obj2, 'test')
+// const res1 = getValue(obj, 'key')
+// const res2 = getValue(obj2, 'test')
+
+// class Collection<T extends number | string> {
+// 	constructor(private _items: T[]) {}
+
+// 	add(value: T) {
+// 		this._items.push(value)
+// 	}
+
+// 	get items(): T[] {
+// 		return this._items
+// 	}
+// }
+
+// const col1 = new Collection<number>([1, 2, 3])
+// col1.add(4)
+
+// const col2 = new Collection<string>(['a', 'b'])
+// col2.add('c')
+
+// class List<R> extends Collection<string> {
+// 	constructor(public type: R) {
+// 		super(['a'])
+// 	}
+// }
+
+// const list1 = new List('qwerty')
+// const list2 = new List(100)
+
+// Патерн Декораторы
