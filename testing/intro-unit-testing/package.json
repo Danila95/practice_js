@@ -1,0 +1,24 @@
+{
+  "name": "intro-unit-testing",
+  "version": "1.0.0",
+  "description": "Jest intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "jest",
+    "unti",
+    "testing"
+  ],
+  "author": "Bogdanov D",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
