@@ -4,9 +4,14 @@ interface Post {
 	body: string
 }
 
+// interface PostsData {
+// 	byId: Record<string, Post>
+// 	allIds: string[]
+// }
+
 interface PostsData {
-	byId: Record<string, Post>
-	allIds: string[]
+	byId: Record<Post['id'], Post>
+	allIds: Post['id'][]
 }
 
 const posts: Array<Post> = [
@@ -53,10 +58,10 @@ const normalizeData = (unnormalizedData: Array<Post>): PostsData => {
 		allIds: []
 	}
 
-	for (const post of unnormalizedData) {
+	unnormalizedData.map(post => {
 		normalizedData.byId[post.id] = post
 		normalizedData.allIds.push(post.id)
-	}
+	})
 
 	return normalizedData
 }
