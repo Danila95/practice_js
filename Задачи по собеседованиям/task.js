@@ -24,34 +24,72 @@ const inventory = {
     copper: 4, // Добавить что-то новое
   };
   
-  const updatedInventory = function (inventory, update) {
-    const cloneInventory = { ...inventory }
-    const cloneUpdate = { ...update }
+//   const updatedInventory = function (inventory, update) {
+//     const cloneInventory = { ...inventory }
+//     const cloneUpdate = { ...update }
 
-    const newObj = {}
-    for (const i in cloneInventory) {
-        for (const j in cloneUpdate) {
-            if (i === j) {
-                newObj[i] = Number(cloneInventory[i]) + Number(cloneUpdate[j]);
-                delete cloneInventory[i]
-                delete cloneUpdate[j];
-                if (newObj[i] < 0) {
-                    throw Error('Ошибка: не может быть отрицательным')
+//     const newObj = {}
+//     for (const i in cloneInventory) {
+//         for (const j in cloneUpdate) {
+//             if (i === j) {
+//                 newObj[i] = Number(cloneInventory[i]) + Number(cloneUpdate[j]);
+//                 delete cloneInventory[i]
+//                 delete cloneUpdate[j];
+//                 if (newObj[i] < 0) {
+//                     throw Error('Ошибка: не может быть отрицательным')
+//                 }
+//             }
+//         }
+//     }
+//     const result = {...newObj, ...cloneInventory, ...cloneUpdate };
+
+//     console.log('result: ', result);
+//   };
+  
+//     updatedInventory(inventory, update);
+//     // Ожидаемый результат: { wood: 13, steel: 0, coal: 8, copper: 4 }
+  
+//   const updateWithError = {
+//     steel: -10, // Ошибка: не может быть отрицательным
+//   };
+  
+//   updatedInventory(inventory, updateWithError); // Должно выбросить ошибку
+  
+// Оптимальное решение
+
+function updatedInventoryOpt(inventory, update) {
+    // Создаем копию исходного объекта, чтобы сохранить иммутабельность
+    const newInventory = {...inventory }
+
+    for (const item in update) {
+        // Необязательная проверка, но вдруг в прототипе что-то лишнее
+        if (update.hasOwnProperty(item)) {
+            if (newInventory.hasOwnProperty(item)) {
+                const newQuantity = newInventory[item] + update[item];
+
+                // Проверка на отрицательное количество
+                if (newQuantity < 0) {
+                    throw new Error('Ошибка: не может быть отрицательным')
                 }
+    
+                newInventory[item] = newQuantity
+            } else {
+                // Если товара нет в инвентаре, просто добавляем его с указанным количеством
+                if (update[item] < 0) {
+                    throw new Error('Ошибка: не может быть отрицательным')
+                }
+                newInventory[item] = update[item]
             }
         }
     }
-    const result = {...newObj, ...cloneInventory, ...cloneUpdate };
 
-    console.log('result: ', result);
-  };
-  
-    updatedInventory(inventory, update);
-    // Ожидаемый результат: { wood: 13, steel: 0, coal: 8, copper: 4 }
-  
+    return newInventory
+}
+console.log(updatedInventoryOpt(inventory, update));
+// Ожидаемый результат: { wood: 13, steel: 0, coal: 8, copper: 4 }
+
   const updateWithError = {
     steel: -10, // Ошибка: не может быть отрицательным
   };
-  
-  updatedInventory(inventory, updateWithError); // Должно выбросить ошибку
-  
+
+updatedInventoryOpt(inventory, updateWithError); // Должно выбросить ошибку
